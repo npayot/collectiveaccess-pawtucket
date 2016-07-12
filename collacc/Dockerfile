@@ -45,6 +45,7 @@ RUN wget https://github.com/collectiveaccess/providence/archive/master.zip \
   && rm master.zip \
   && mv pawtucket-master /var/www/html/pawtucket \
   && ln -s /var/www/html/media /var/www/html/pawtucket/media \
+  && mkdir /var/www/html/media/collectiveaccess \
   && groupadd webdev \
   && chown -R root.webdev /var/www/html \
   && chmod 775 /var/www/html \
@@ -54,6 +55,7 @@ RUN wget https://github.com/collectiveaccess/providence/archive/master.zip \
   && chmod 777 /var/www/html/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache \
   && chmod 777 /var/www/html/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer \
   && chmod 777 /var/www/html/media \
+  && chmod 777 /var/www/html/media/collectiveaccess \
   && chmod 777 /var/www/html/pawtucket/app/tmp \
   && chmod 777 /var/www/html/pawtucket/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache \
   && chmod 777 /var/www/html/pawtucket/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer \
