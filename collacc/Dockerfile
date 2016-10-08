@@ -54,12 +54,13 @@ RUN wget https://github.com/collectiveaccess/providence/archive/master.zip \
   && chmod 777 /var/www/html/app/tmp \
   && chmod 777 /var/www/html/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache \
   && chmod 777 /var/www/html/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer \
-  && chmod 777 /var/www/html/media \
-  && chmod 777 /var/www/html/media/collectiveaccess \
+  && mkdir -p /var/www/html/media/collectiveaccess/images \
+  && mkdir /var/www/html/media/collectiveaccess/tilepics \
+  && chmod -R 777 /var/www/html/media \
   && chmod 777 /var/www/html/pawtucket/app/tmp \
   && chmod 777 /var/www/html/pawtucket/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache \
   && chmod 777 /var/www/html/pawtucket/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer \
-  && chmod 777 /var/www/html/pawtucket/media
+  && chmod -R 777 /var/www/html/pawtucket/media
 # --> creer lien symbolique de 'media' dans pawtucket --> a faire manuellement
 
 
