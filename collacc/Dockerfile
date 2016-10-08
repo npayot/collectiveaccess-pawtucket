@@ -69,6 +69,7 @@ RUN wget https://github.com/collectiveaccess/providence/archive/master.zip \
 COPY php.ini /etc/php5/cli/php.ini
 COPY setup.php /var/www/html/setup.php
 COPY pa-setup.php /var/www/html/pawtucket/setup.php
+COPY app.conf /var/www/html/pawtucket/app/conf/app.conf
 
 EXPOSE 80
 
